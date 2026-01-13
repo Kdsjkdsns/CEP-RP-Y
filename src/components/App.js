@@ -16,8 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home title="Welcome to RP" />} />
         <Route path="categories" element={<Categories />}>
-          <Route path=":catId" element={<Category />} />
+          <Route path=":catId" element={<Category />}>
             <Route path=":sessionId" element={<Session />} />
+          </Route>
           <Route index element={<h3>Select a diploma from above</h3>} />
         </Route>
         <Route path="register" element={<Register />} />
